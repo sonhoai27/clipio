@@ -13,7 +13,7 @@
 
 ## ✨ Key Features
 
-*   **Liquid Glass Quick Paste**: A stunning, semi-transparent overlay UI with native macOS blur effects (`.popover` material) for a premium look and feel.
+*   **User-Centric UI**: A clean, focused interface designed with a pixel-perfect UX philosophy to put your productivity and ease of use at the center.
 *   **Real-time Updates**: The list refreshes instantly as you copy new items—no need to close and reopen the window.
 *   **Smart Categorization**: Automatically detects and organizes **Links**, **Images**, **Colors** (Hex codes), and **Plain Text**.
 *   **Numerical Hotkeys**: Quickly select and paste items using keyboard digits (1-9 and 0) for a blazing-fast workflow.

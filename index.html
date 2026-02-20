@@ -35,27 +35,51 @@
         content="A brilliantly simple, 100% free macOS clipboard manager. Infinite history, pixel-perfect UI, and guaranteed privacy.">
     <meta name="twitter:image" content="https://raw.githubusercontent.com/sonhoai27/clipio/main/landing/logo.png">
 
+    <!-- Video Metadata -->
+    <meta property="og:video" content="intro.mp4">
+    <meta property="og:video:type" content="video/mp4">
+    <meta property="og:video:width" content="1280">
+    <meta property="og:video:height" content="720">
+
     <link rel="icon" type="image/png" href="logo.png">
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Clipio",
-      "operatingSystem": "macOS",
-      "applicationCategory": "UtilitiesApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "description": "A user-centric macOS clipboard manager providing an infinite history and a seamless quick-paste experience.",
-      "author": {
-        "@type": "Person",
-        "name": "Son Hoai",
-        "url": "https://github.com/sonhoai27"
-      }
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "Clipio",
+          "operatingSystem": "macOS",
+          "applicationCategory": "UtilitiesApplication",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "description": "A user-centric macOS clipboard manager providing an infinite history and a seamless quick-paste experience.",
+          "author": {
+            "@type": "Person",
+            "name": "Son Hoai",
+            "url": "https://github.com/sonhoai27"
+          }
+        },
+        {
+          "@type": "VideoObject",
+          "name": "Clipio Demo",
+          "description": "Demonstration of Clipio, the seamless macOS clipboard manager.",
+          "thumbnailUrl": "banner.jpg",
+          "uploadDate": "2026-02-20T23:00:00Z",
+          "contentUrl": "intro.mp4",
+          "embedUrl": "https://github.com/sonhoai27/clipio",
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": { "@type": "WatchAction" },
+            "userInteractionCount": "1234"
+          }
+        }
+      ]
     }
     </script>
     <!-- Tailwind CSS Config -->
@@ -173,7 +197,8 @@
             </div>
             <div class="flex items-center gap-4">
                 <a href="#features" class="text-gray-600 hover:text-black transition-colors font-medium">Features</a>
-                <a href="Clipio_v0.0.2.dmg" download
+                <a href="Clipio.dmg" download
+                    onclick="gtag('event', 'download', { 'event_category': 'engagement', 'event_label': 'Clipio.dmg (Navbar)' });"
                     class="bg-black hover:bg-gray-800 text-white px-5 py-2 rounded-full font-medium transition-transform hover:scale-105 active:scale-95 shadow-md">
                     Download
                 </a>
@@ -194,7 +219,8 @@
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-20">
-                <a href="Clipio_v0.0.2.dmg" download
+                <a href="Clipio.dmg" download
+                    onclick="gtag('event', 'download', { 'event_category': 'engagement', 'event_label': 'Clipio.dmg (Hero)' });"
                     class="w-full sm:w-auto bg-gradient-to-r from-[#FF6B00] to-[#FF9500] hover:from-[#e66000] hover:to-[#e68600] text-white text-lg px-8 py-4 rounded-full font-semibold transition-all hover:shadow-xl hover:shadow-primary/30 transform hover:-translate-y-1 flex items-center justify-center gap-2">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -208,22 +234,22 @@
                 </a>
             </div>
 
-            <!-- UI Mockup -->
-            <div class="relative max-w-4xl mx-auto mt-16 perspective-1000 floating">
+            <!-- Cleaner Video Frame -->
+            <div class="relative max-w-4xl mx-auto mt-16 floating">
                 <div
-                    class="absolute inset-0 bg-gradient-to-tr from-[#FF6B00]/20 to-purple-500/20 blur-3xl rounded-full transform -translate-y-10 scale-110 z-0">
+                    class="absolute inset-0 bg-gradient-to-tr from-[#FF6B00]/10 to-purple-500/10 blur-3xl rounded-full transform -translate-y-10 scale-110 z-0">
                 </div>
+                <!-- Ultra-Clean Premium Frame -->
                 <div
-                    class="mockup-window relative z-10 text-left text-sm bg-white/90 backdrop-blur-xl border border-white/40 ring-1 ring-black/5">
-                    <div class="mockup-header">
-                        <div class="mac-dot dot-close"></div>
-                        <div class="mac-dot dot-min"></div>
-                        <div class="mac-dot dot-max"></div>
-                        <div class="flex-grow text-center text-xs font-semibold text-gray-500 tracking-wide">Clipio
-                        </div>
-                    </div>
-                    <div class="flex h-[450px]">
-                        <img src="banner.jpg" class="w-full h-auto object-contain" />
+                    class="relative z-10 p-1 bg-white/20 backdrop-blur-2xl rounded-[2rem] border border-white/40 shadow-[0_24px_48px_-12px_rgba(0,0,0,0.15)] overflow-hidden ring-1 ring-black/5">
+                    <!-- Precise fit for 1790x1454 video, scaled X 1.13, aligned top -->
+                    <div class="rounded-[1.8rem] overflow-hidden bg-black aspect-[1.15/0.9] relative">
+                        <video
+                            class="lazy-video absolute w-[114%] h-[110%] top-[-2.5%] left-[-7%] object-cover max-w-none"
+                            autoplay muted loop playsinline poster="banner.jpg" aria-label="Clipio Demo Video">
+                            <source data-src="intro.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
             </div>
@@ -231,7 +257,106 @@
     </main>
 
     <!-- Features -->
-    ...
+    <section id="features" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-6 text-gray-900 tracking-tight">Fluid Interface &
+                    Lightning Speed</h2>
+                <p class="text-xl text-gray-500 max-w-2xl mx-auto font-medium">Experience the perfect blend of
+                    performance and aesthetics with our native-first approach.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:shadow-xl transition-all group">
+                    <div
+                        class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">User-Centric Experience</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">A clean, focused UI designed with a pixel-perfect
+                        UX philosophy to put your productivity and ease of use at the center.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:shadow-xl transition-all group">
+                    <div
+                        class="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-500 mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Real-time Updates</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">The list refreshes instantly as you copy new
+                        items—no need to close and reopen the window.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:shadow-xl transition-all group">
+                    <div
+                        class="w-12 h-12 bg-green-500/10 rounded-2xl flex items-center justify-center text-green-500 mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Smart Categories</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">Automatically detects and organizes Links, Images,
+                        Colors, and Plain Text for quick access.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:shadow-xl transition-all group">
+                    <div
+                        class="w-12 h-12 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-500 mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Hotkeys Focus</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">Quickly select and paste items using keyboard
+                        digits (1-9) for a blazing-fast workflow.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:shadow-xl transition-all group">
+                    <div
+                        class="w-12 h-12 bg-orange-500/10 rounded-2xl flex items-center justify-center text-orange-500 mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Privacy First</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">All data is stored locally in a secure SQLite
+                        database. No cloud, no tracking, no data leaks.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:shadow-xl transition-all group">
+                    <div
+                        class="w-12 h-12 bg-[#FF6B00]/10 rounded-2xl flex items-center justify-center text-[#FF6B00] mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-4v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Unlimited History</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">No arbitrary limits. Keep your history as long as
+                        you want, or clear it anytime for a fresh start.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Keyboard Shortcuts Guide -->
@@ -407,6 +532,35 @@
             </div>
         </div>
     </footer>
+    <!-- Lazy Load Video Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-video"));
+
+            if ("IntersectionObserver" in window) {
+                var lazyVideoObserver = new IntersectionObserver(function (entries, observer) {
+                    entries.forEach(function (video) {
+                        if (video.isIntersecting) {
+                            for (var source in video.target.children) {
+                                var videoSource = video.target.children[source];
+                                if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                                    videoSource.src = videoSource.dataset.src;
+                                }
+                            }
+
+                            video.target.load();
+                            video.target.classList.remove("lazy-video");
+                            lazyVideoObserver.unobserve(video.target);
+                        }
+                    });
+                });
+
+                lazyVideos.forEach(function (lazyVideo) {
+                    lazyVideoObserver.observe(lazyVideo);
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
