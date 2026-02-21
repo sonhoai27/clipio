@@ -263,6 +263,51 @@
                     performance and aesthetics with our native-first approach.</p>
             </div>
 
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Perf 1 -->
+                <div class="p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:shadow-xl transition-all group">
+                    <div
+                        class="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-500 mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Buttery-Smooth Navigation</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">Optimized UI engine ensures zero input lag when
+                        navigating through history with arrow keys.</p>
+                </div>
+                <!-- Perf 2 -->
+                <div class="p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:shadow-xl transition-all group">
+                    <div
+                        class="w-12 h-12 bg-orange-500/10 rounded-2xl flex items-center justify-center text-orange-500 mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Smart App Icon Caching</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">Advanced memory caching for application icons
+                        eliminates flickering during rapid scrolling.</p>
+                </div>
+                <!-- Perf 3 -->
+                <div class="p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:shadow-xl transition-all group">
+                    <div
+                        class="w-12 h-12 bg-green-500/10 rounded-2xl flex items-center justify-center text-green-500 mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Intelligent Search Filters</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">Find exactly what you need with patterns like <code
+                            class="bg-gray-200 px-1 rounded">is:pinned</code>, <code
+                            class="bg-gray-200 px-1 rounded">app:Name</code>, or <code
+                            class="bg-gray-200 px-1 rounded">type:url</code>.</p>
+                </div>
+            </div>
+
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Feature 1 -->
@@ -371,18 +416,17 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-12">
-                <!-- Navigation -->
                 <div
                     class="bg-gray-50/50 border border-gray-100 p-8 rounded-3xl transition-all hover:shadow-xl hover:shadow-gray-200/50">
                     <h3 class="text-2xl font-bold mb-8 flex items-center gap-3 text-gray-900">
                         <span
                             class="w-8 h-8 bg-black text-white rounded-lg flex items-center justify-center text-sm">01</span>
-                        Basic Navigation
+                        Navigation & Pining
                     </h3>
                     <ul class="space-y-6">
                         <li class="flex justify-between items-center group">
                             <span class="text-gray-600 font-medium group-hover:text-black transition-colors">Move
-                                selection cursor</span>
+                                selection cursor up / down</span>
                             <div class="flex gap-2">
                                 <kbd
                                     class="px-3 py-1 bg-white border border-gray-200 shadow-sm rounded-md font-mono text-sm leading-none shrink-0 text-gray-900">↑</kbd>
@@ -391,16 +435,21 @@
                             </div>
                         </li>
                         <li class="flex justify-between items-center group">
+                            <span class="text-gray-600 font-medium group-hover:text-black transition-colors">Pin / Unpin
+                                selected item</span>
+                            <div class="flex items-center gap-1">
+                                <kbd
+                                    class="px-3 py-1 bg-white border border-gray-200 shadow-sm rounded-md font-mono text-sm leading-none shrink-0 text-gray-900">⌘</kbd>
+                                <span class="text-gray-400 font-bold">+</span>
+                                <kbd
+                                    class="px-3 py-1 bg-white border border-gray-200 shadow-sm rounded-md font-mono text-sm leading-none shrink-0 text-gray-900">P</kbd>
+                            </div>
+                        </li>
+                        <li class="flex justify-between items-center group">
                             <span class="text-gray-600 font-medium group-hover:text-black transition-colors">Paste
                                 selected item</span>
                             <kbd
                                 class="px-3 py-1 bg-white border border-gray-200 shadow-sm rounded-md font-mono text-sm leading-none shrink-0 text-gray-900">Enter</kbd>
-                        </li>
-                        <li class="flex justify-between items-center group">
-                            <span class="text-gray-600 font-medium group-hover:text-black transition-colors">Close Quick
-                                Paste</span>
-                            <kbd
-                                class="px-3 py-1 bg-white border border-gray-200 shadow-sm rounded-md font-mono text-sm leading-none shrink-0 text-gray-900">Esc</kbd>
                         </li>
                     </ul>
                 </div>
@@ -411,18 +460,18 @@
                     <h3 class="text-2xl font-bold mb-8 flex items-center gap-3 text-primary">
                         <span
                             class="w-8 h-8 bg-primary/20 text-primary rounded-lg flex items-center justify-center text-sm">02</span>
-                        Multi-Select Mode
+                        Multi-Select Power
                     </h3>
                     <ul class="space-y-6">
                         <li class="flex justify-between items-center group">
-                            <span class="text-gray-600 font-medium group-hover:text-black transition-colors">Toggle item
-                                selection</span>
+                            <span class="text-gray-600 font-medium group-hover:text-black transition-colors">Toggle
+                                selection for current item</span>
                             <kbd
                                 class="px-3 py-1 bg-white border border-gray-200 shadow-sm rounded-md font-mono text-sm leading-none shrink-0 text-gray-900">Space</kbd>
                         </li>
                         <li class="flex justify-between items-center group">
-                            <span class="text-gray-600 font-medium group-hover:text-black transition-colors">Select
-                                range (Excel-style)</span>
+                            <span class="text-gray-600 font-medium group-hover:text-black transition-colors">Range
+                                Selection (Excel-style)</span>
                             <div class="flex items-center gap-1">
                                 <kbd
                                     class="px-3 py-1 bg-white border border-gray-200 shadow-sm rounded-md font-mono text-sm leading-none shrink-0 text-gray-900">Shift</kbd>
@@ -433,7 +482,7 @@
                         </li>
                         <li class="flex justify-between items-center group">
                             <span class="text-gray-600 font-medium group-hover:text-black transition-colors">Select all
-                                items</span>
+                                items in current list</span>
                             <div class="flex items-center gap-1">
                                 <kbd
                                     class="px-3 py-1 bg-white border border-gray-200 shadow-sm rounded-md font-mono text-sm leading-none shrink-0 text-gray-900">⌘</kbd>
@@ -443,8 +492,8 @@
                             </div>
                         </li>
                         <li class="flex justify-between items-center group">
-                            <span class="text-black font-bold group-hover:text-primary transition-colors">Merge
-                                & Paste Selection</span>
+                            <span class="text-black font-bold group-hover:text-primary transition-colors">Merge & Paste
+                                selections</span>
                             <kbd
                                 class="px-3 py-1 bg-primary text-white border border-primary/20 rounded-md font-mono text-sm leading-none shrink-0 shadow-lg shadow-primary/30">Enter</kbd>
                         </li>
@@ -476,22 +525,48 @@
                 <div class="absolute left-4 md:left-1/2 md:-ml-px h-full w-0.5 bg-gray-100"></div>
 
                 <div class="space-y-16">
-                    <!-- v0.0.4 -->
+                    <!-- v0.0.5 -->
                     <div
                         class="relative flex flex-col md:flex-row md:justify-between items-start md:items-center w-full">
-                        <div class="md:w-[45%] order-1 hidden md:block"></div>
+                        <div class="md:w-[45%] order-1 hidden md:block text-right pr-6">
+                            <span
+                                class="text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full">Newest</span>
+                        </div>
                         <div
                             class="absolute left-1 md:left-1/2 md:-ml-4 w-6 h-6 md:w-8 md:h-8 rounded-full bg-primary border-4 border-white shadow-sm z-10 order-1 md:order-2">
                         </div>
                         <div class="md:w-[45%] pl-12 md:pl-0 mt-4 md:mt-0 order-2 md:order-3 w-full">
-                            <h3 class="text-2xl font-bold text-gray-900">v0.0.4 (Current)</h3>
-                            <p class="text-primary font-semibold mb-3">Intelligent Source Tracking</p>
-                            <ul class="text-gray-600 space-y-2">
+                            <h3 class="text-2xl font-bold text-gray-900">v0.0.5 (Latest)</h3>
+                            <p class="text-primary font-semibold mb-3">Pinning & Smart Search</p>
+                            <ul class="text-gray-600 space-y-2 text-sm">
+                                <li>📌 <b>Item Pinning:</b> Keep snippets at the top with <kbd
+                                        class="px-1 bg-gray-100 border rounded">⌘P</kbd></li>
+                                <li>🔍 <b>Smart Search:</b> Filters for <code
+                                        class="bg-gray-100 px-1 rounded">is:pinned</code>, <code
+                                        class="bg-gray-100 px-1 rounded">app:Name</code>, etc.</li>
+                                <li>🏎️ <b>UI Engine:</b> Major overhaul for fluid, zero-flicker navigation</li>
+                                <li>📖 <b>Guide:</b> Added "Shortcut & Search Guide" to Preferences</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- v0.0.4 -->
+                    <div
+                        class="relative flex flex-col md:flex-row md:justify-between items-start md:items-center w-full">
+                        <div
+                            class="md:w-[45%] pl-12 md:pl-0 mb-4 md:mb-0 md:text-right order-2 md:order-1 flex flex-col items-start md:items-end w-full">
+                            <h3 class="text-2xl font-bold text-gray-900">v0.0.4</h3>
+                            <p class="text-gray-500 font-semibold mb-3">Intelligent Source Tracking</p>
+                            <ul class="text-gray-600 space-y-2 text-sm">
                                 <li>🎯 Source App Icons: Original app badges on thumbnails</li>
                                 <li>🧐 Smarter Links: Perfect URL & number parsing</li>
                                 <li>✨ Visual Polish: Cleaner, context-rich clipboard history</li>
                             </ul>
                         </div>
+                        <div
+                            class="absolute left-1 md:left-1/2 md:-ml-4 w-6 h-6 md:w-8 md:h-8 rounded-full bg-gray-200 border-4 border-white shadow-sm z-10 order-1 md:order-2">
+                        </div>
+                        <div class="md:w-[45%] order-3 hidden md:block"></div>
                     </div>
 
                     <!-- v0.0.3 -->
